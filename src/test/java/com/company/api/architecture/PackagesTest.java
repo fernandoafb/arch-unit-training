@@ -5,6 +5,7 @@ import com.tngtech.archunit.junit.ArchTest;
 import com.tngtech.archunit.junit.ArchUnitRunner;
 import com.tngtech.archunit.lang.ArchRule;
 import org.junit.runner.RunWith;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,5 +26,11 @@ public class PackagesTest {
             .that().areAnnotatedWith(Service.class)
             .or().haveNameMatching(".*Service")
             .should().resideInAPackage("..service..");
+
+    @ArchTest
+    public static final ArchRule repositoryRule = classes()
+            .that().areAnnotatedWith(Repository.class)
+            .or().haveNameMatching(".*Repository")
+            .should().resideInAPackage("..repository..");
 
 }
