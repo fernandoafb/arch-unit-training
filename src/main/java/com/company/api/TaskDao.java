@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public abstract class TaskRepository implements CrudRepository<Task, Long> {
+public abstract class TaskDao implements CrudRepository<Task, Long> {
 
     @Autowired
     private UserService userService;
