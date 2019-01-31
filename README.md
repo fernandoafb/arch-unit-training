@@ -25,34 +25,34 @@ For example: [awesome-tag] Awesome description
 2. [`add-arch-unit-junit4`] Adding Arch Unit (jUnit 4) as a dependency
 
 3. Adding simple package checks
-* [add-controller-package-rule] Controllers
-* [add-service-package-rule] Services
-* [add-repository-package-rule] Repositories
+* [`add-controller-package-rule`] Controllers
+* [`add-service-package-rule`] Services
+* [`add-repository-package-rule`] Repositories
 
 4. Using Built-in rules
-* [standard-streams-rule] Standard streams
-* [generic-exceptions-rule] Generic Exceptions
-* [logging-rule] java.util.logging
+* [`standard-streams-rule`] Standard streams
+* [`generic-exceptions-rule`] Generic Exceptions
+* [`logging-rule`] java.util.logging
 
 5. Simple access check
-* [services-access-rule] Services should only be accessed by controllers and services
+* [`services-access-rule`] Services should only be accessed by controllers and services
 
 6. Simple naming standards and interfaces tests
-* [services-suffix-rule] Services should be suffixed
-* [interfaces-name-rule] Interfaces should not be named interfaces
-* [interfaces-package-rule] Interfaces should not be in the impl package
+* [`services-suffix-rule`] Services should be suffixed
+* [`interfaces-name-rule`] Interfaces should not be named interfaces
+* [`interfaces-package-rule`] Interfaces should not be in the impl package
 
 7. Deprecating classes
-* [deprecating-classes-rule]  No new classes should implement some deprecated interface
+* [`deprecating-classes-rule`] No new classes should implement some deprecated interface
 
 8. Package containment (domain)
-* [user-domain-rule]   Classes of the User domain should be in its package
+* [`user-domain-rule`] Classes of the User domain should be in its package
 
 9. Inheritance
-* [concrete-repositories-rule]  Concrete classes that implement the CrudRepository interface should be suffixed Repository
+* [`concrete-repositories-rule`] Concrete classes that implement the CrudRepository interface should be suffixed Repository
 
 10. Dependency
-* [user-dependency-rule] Class User should only be used by User-related classes (UserController, UserService, UserRepository, and so on)
+* [`user-dependency-rule`] Class User should only be used by User-related classes (UserController, UserService, UserRepository, and so on)
 
 # Contact
 
