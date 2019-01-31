@@ -20,9 +20,9 @@ For example: [awesome-tag] Awesome description
 
 # Step by Step Tags
 
-1. [basic-project] Basic project
+1. [`basic-project`] Basic project
 
-2. [add-arch-unit-junit4] Adding Arch Unit (jUnit 4) as a dependency
+2. [`add-arch-unit-junit4`] Adding Arch Unit (jUnit 4) as a dependency
 
 3. Adding simple package checks
 * [add-controller-package-rule] Controllers
