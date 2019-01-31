@@ -8,14 +8,19 @@ import org.junit.runner.RunWith;
 import org.springframework.stereotype.Service;
 
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
+import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noClasses;
 
 @RunWith(ArchUnitRunner.class)
 @AnalyzeClasses(packages = "com.company.api")
 public class NamingStandardsTest {
 
     @ArchTest
-    public static final ArchRule servicesShouldBeSuffixedRule = classes()
+    public static final ArchRule servicesShouldBePrefixedRule = classes()
             .that().areAnnotatedWith(Service.class)
             .should().haveSimpleNameEndingWith("Service");
+
+    @ArchTest
+    public static final ArchRule interfacesShouldNotHaveSimpleClassNamesEndingWithTheWordInterfaceRule =
+            noClasses().that().areInterfaces().should().haveSimpleNameContaining("Interface");
 
 }
