@@ -18,4 +18,9 @@ public class UserDomainTest {
             .that().haveSimpleNameStartingWith("User")
             .should().resideInAPackage("com.company.api.user..");
 
+    @ArchTest
+    public static final ArchRule userDependency = classes()
+            .that().haveNameMatching(".*User.*")
+            .should().onlyBeAccessed().byClassesThat().haveNameMatching(".*User.*");
+
 }
